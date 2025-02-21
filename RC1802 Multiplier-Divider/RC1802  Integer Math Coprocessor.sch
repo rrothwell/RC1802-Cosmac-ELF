@@ -1,0 +1,629 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title "RC1802 Math Coprocessor"
+Date "2025-02-15"
+Rev "A"
+Comp "Farad"
+Comment1 "Schematic for bus card for RC1802 CPU system."
+Comment2 "One IC to provide 8x8 bit integer multiply and 16x8 bit integer divide."
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR0101
+U 1 1 67B58A86
+P 6400 5950
+F 0 "#PWR0101" H 6400 5700 50  0001 C CNN
+F 1 "GND" H 6405 5777 50  0000 C CNN
+F 2 "" H 6400 5950 50  0001 C CNN
+F 3 "" H 6400 5950 50  0001 C CNN
+	1    6400 5950
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	7700 4850 7800 4950
+Entry Wire Line
+	7700 4950 7800 5050
+Entry Wire Line
+	7700 5050 7800 5150
+Entry Wire Line
+	7700 5150 7800 5250
+Entry Wire Line
+	7700 5250 7800 5350
+Entry Wire Line
+	7700 5350 7800 5450
+Entry Wire Line
+	7700 5450 7800 5550
+Entry Wire Line
+	7700 5550 7800 5650
+Wire Wire Line
+	5500 2250 5500 3150
+Text Notes 10050 5800 0    50   Italic 0
+Add bodge wire to CPU CLEAR output.
+Wire Wire Line
+	9650 5300 9350 5300
+Wire Wire Line
+	5600 2350 5600 3050
+Wire Wire Line
+	5400 4100 5400 3400
+Wire Wire Line
+	5800 3800 5800 7000
+Wire Wire Line
+	5500 3500 5500 6700
+Wire Wire Line
+	8150 6700 8150 5600
+Wire Wire Line
+	9550 5600 9550 5700
+Wire Wire Line
+	7750 3800 7750 3600
+Wire Wire Line
+	7650 4250 7650 4600
+Wire Wire Line
+	7650 3650 7650 4250
+Connection ~ 7650 4250
+Wire Wire Line
+	7550 4150 7550 4450
+$Comp
+L Device:CP C1
+U 1 1 67C4810D
+P 8250 4850
+F 0 "C1" H 8368 4896 50  0000 L CNN
+F 1 "100u" H 8368 4805 50  0000 L CNN
+F 2 "CP_Radial_D5.0mm_P2.50mm" H 8288 4700 50  0001 C CNN
+F 3 "~" H 8250 4850 50  0001 C CNN
+	1    8250 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 67C49602
+P 8700 4850
+F 0 "C2" H 8815 4896 50  0000 L CNN
+F 1 "100n" H 8815 4805 50  0000 L CNN
+F 2 "C_Disc_D4.7mm_W2.5mm_P5.00mm" H 8738 4700 50  0001 C CNN
+F 3 "~" H 8700 4850 50  0001 C CNN
+	1    8700 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5C #PWR0105
+U 1 1 67C5742D
+P 8250 4600
+F 0 "#PWR0105" H 8250 4450 50  0001 C CNN
+F 1 "+5C" H 8265 4773 50  0000 C CNN
+F 2 "" H 8250 4600 50  0001 C CNN
+F 3 "" H 8250 4600 50  0001 C CNN
+	1    8250 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 67C58F64
+P 8250 5100
+F 0 "#PWR0106" H 8250 4850 50  0001 C CNN
+F 1 "GND" H 8255 4927 50  0000 C CNN
+F 2 "" H 8250 5100 50  0001 C CNN
+F 3 "" H 8250 5100 50  0001 C CNN
+	1    8250 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 4600 8250 4700
+Connection ~ 8250 4700
+Wire Wire Line
+	8700 4700 9000 4700
+Wire Wire Line
+	9150 4700 9150 5000
+Connection ~ 8700 4700
+Wire Wire Line
+	8250 5100 8250 5000
+Connection ~ 8250 5000
+Wire Wire Line
+	9050 5000 9050 4900
+Connection ~ 8700 5000
+Connection ~ 5400 3400
+Wire Wire Line
+	5400 3400 5250 3400
+Wire Wire Line
+	5500 6700 8150 6700
+Wire Wire Line
+	8250 4700 8700 4700
+Wire Wire Line
+	8250 5000 8700 5000
+Wire Wire Line
+	9550 5700 9650 5700
+Wire Wire Line
+	9250 3900 9650 3900
+Wire Wire Line
+	5900 3900 5900 7100
+Wire Wire Line
+	9350 2350 9350 5300
+Wire Wire Line
+	5700 3700 5700 6900
+Wire Wire Line
+	9450 6500 9650 6500
+Wire Wire Line
+	9450 6400 9650 6400
+Wire Wire Line
+	9450 6300 9650 6300
+Wire Wire Line
+	9450 6200 9650 6200
+Wire Wire Line
+	9450 6100 9650 6100
+Wire Wire Line
+	9450 6000 9650 6000
+Wire Wire Line
+	9450 5800 9450 2250
+Wire Wire Line
+	9250 3900 9250 6800
+Wire Wire Line
+	9450 5800 9650 5800
+Wire Wire Line
+	9350 2350 5600 2350
+Wire Bus Line
+	7800 5700 9350 5700
+Wire Wire Line
+	9450 2250 5500 2250
+Wire Wire Line
+	5700 6900 9650 6900
+Wire Wire Line
+	5800 7000 9650 7000
+Wire Wire Line
+	5900 7100 9650 7100
+Wire Wire Line
+	5600 3600 5600 6800
+Wire Wire Line
+	8150 5600 9550 5600
+$Comp
+L RC1802--Integer-Math-Coprocessor:RC1802_card_edge_connector-RC1802-CPU J1
+U 1 1 67BB46A6
+P 9800 5350
+F 0 "J1" H 9282 5561 50  0000 R CNN
+F 1 "RC1802_card_edge_connector" H 9282 5470 50  0001 R CNN
+F 2 "PinHeader_1x39_P2.54mm_Horizontal" H 9800 5350 50  0001 C CNN
+F 3 "" H 9800 5350 50  0001 C CNN
+	1    9800 5350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Small TP-BUS7
+U 1 1 67BA7225
+P 7700 4850
+F 0 "TP-BUS7" H 7850 4850 39  0000 L CNN
+F 1 "TestPoint_Small" H 7748 4805 50  0001 L CNN
+F 2 "" H 7900 4850 50  0001 C CNN
+F 3 "~" H 7900 4850 50  0001 C CNN
+	1    7700 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Small TP-BUS6
+U 1 1 67BA7F3B
+P 7700 4950
+F 0 "TP-BUS6" H 7850 4950 39  0000 L CNN
+F 1 "TestPoint_Small" H 7748 4905 50  0001 L CNN
+F 2 "" H 7900 4950 50  0001 C CNN
+F 3 "~" H 7900 4950 50  0001 C CNN
+	1    7700 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Small TP-BUS5
+U 1 1 67BA8D09
+P 7700 5050
+F 0 "TP-BUS5" H 7850 5050 39  0000 L CNN
+F 1 "TestPoint_Small" H 7748 5005 50  0001 L CNN
+F 2 "" H 7900 5050 50  0001 C CNN
+F 3 "~" H 7900 5050 50  0001 C CNN
+	1    7700 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Small TP-BUS4
+U 1 1 67BA9BC8
+P 7700 5150
+F 0 "TP-BUS4" H 7850 5150 39  0000 L CNN
+F 1 "TestPoint_Small" H 7748 5105 50  0001 L CNN
+F 2 "" H 7900 5150 50  0001 C CNN
+F 3 "~" H 7900 5150 50  0001 C CNN
+	1    7700 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Small TP-BUS3
+U 1 1 67BAA8EC
+P 7700 5250
+F 0 "TP-BUS3" H 7850 5250 39  0000 L CNN
+F 1 "TestPoint_Small" H 7748 5205 50  0001 L CNN
+F 2 "" H 7900 5250 50  0001 C CNN
+F 3 "~" H 7900 5250 50  0001 C CNN
+	1    7700 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Small TP-BUS2
+U 1 1 67BAB0C2
+P 7700 5350
+F 0 "TP-BUS2" H 7850 5350 39  0000 L CNN
+F 1 "TestPoint_Small" H 7748 5305 50  0001 L CNN
+F 2 "" H 7900 5350 50  0001 C CNN
+F 3 "~" H 7900 5350 50  0001 C CNN
+	1    7700 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Small TP-BUS1
+U 1 1 67BAC148
+P 7700 5450
+F 0 "TP-BUS1" H 7850 5450 39  0000 L CNN
+F 1 "TestPoint_Small" H 7748 5405 50  0001 L CNN
+F 2 "" H 7900 5450 50  0001 C CNN
+F 3 "~" H 7900 5450 50  0001 C CNN
+	1    7700 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Small TP-BUS0
+U 1 1 67BACE26
+P 7700 5550
+F 0 "TP-BUS0" H 7850 5550 39  0000 L CNN
+F 1 "TestPoint_Small" H 7748 5505 50  0001 L CNN
+F 2 "" H 7900 5550 50  0001 C CNN
+F 3 "~" H 7900 5550 50  0001 C CNN
+	1    7700 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 3250 5400 3150
+$Comp
+L Connector:TestPoint TP-SHFT1
+U 1 1 67BB97C2
+P 5400 3150
+F 0 "TP-SHFT1" H 4950 3300 50  0000 L CNN
+F 1 "TestPoint" H 5458 3177 50  0001 L CNN
+F 2 "" H 5600 3150 50  0001 C CNN
+F 3 "~" H 5600 3150 50  0001 C CNN
+	1    5400 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 3500 5000 3500
+Wire Wire Line
+	5000 3500 5000 3450
+Connection ~ 5500 3500
+Wire Wire Line
+	5600 3600 4900 3600
+Wire Wire Line
+	4900 3600 4900 3550
+Connection ~ 5600 3600
+$Comp
+L Connector:TestPoint TP-CLK1
+U 1 1 67BC2645
+P 5900 3000
+F 0 "TP-CLK1" H 5650 3200 50  0000 L CNN
+F 1 "TestPoint" H 5958 3027 50  0001 L CNN
+F 2 "" H 6100 3000 50  0001 C CNN
+F 3 "~" H 6100 3000 50  0001 C CNN
+	1    5900 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP-RW1
+U 1 1 67BC3B61
+P 5000 3450
+F 0 "TP-RW1" H 4650 3600 50  0000 L CNN
+F 1 "TestPoint" H 5058 3470 50  0001 L CNN
+F 2 "" H 5200 3450 50  0001 C CNN
+F 3 "~" H 5200 3450 50  0001 C CNN
+	1    5000 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP-STB1
+U 1 1 67BC40D6
+P 4900 3550
+F 0 "TP-STB1" H 4500 3700 50  0000 L CNN
+F 1 "TestPoint" H 4958 3577 50  0001 L CNN
+F 2 "" H 5100 3550 50  0001 C CNN
+F 3 "~" H 5100 3550 50  0001 C CNN
+	1    4900 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 4450 7450 4450
+Wire Wire Line
+	7450 4250 7650 4250
+Wire Wire Line
+	7450 3800 7750 3800
+Wire Wire Line
+	7450 3650 7650 3650
+Wire Wire Line
+	7450 4150 7550 4150
+Wire Wire Line
+	7650 4600 7450 4600
+Wire Wire Line
+	7450 4850 7700 4850
+Wire Wire Line
+	7450 4950 7700 4950
+Wire Wire Line
+	7450 5050 7700 5050
+Wire Wire Line
+	7450 5150 7700 5150
+Wire Wire Line
+	7450 5250 7700 5250
+Wire Wire Line
+	7450 5350 7700 5350
+Wire Wire Line
+	7450 5450 7700 5450
+Wire Wire Line
+	7450 5550 7700 5550
+Wire Wire Line
+	6400 5800 6400 5950
+Wire Wire Line
+	5600 3050 5900 3050
+Wire Wire Line
+	5900 3000 5900 3050
+Connection ~ 5900 3050
+$Comp
+L Device:Jumper_NC_Small EF4
+U 1 1 67BF67CA
+P 9100 3600
+F 0 "EF4" H 9250 3650 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 9100 3721 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9100 3600 50  0001 C CNN
+F 3 "~" H 9100 3600 50  0001 C CNN
+	1    9100 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 3600 8850 3600
+Wire Wire Line
+	9200 3600 9650 3600
+$Comp
+L Device:Jumper_NO_Small EF3
+U 1 1 67BFE47E
+P 9100 3500
+F 0 "EF3" H 9250 3550 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 9100 3594 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9100 3500 50  0001 C CNN
+F 3 "~" H 9100 3500 50  0001 C CNN
+	1    9100 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NO_Small EF2
+U 1 1 67BFEE72
+P 9100 3400
+F 0 "EF2" H 9250 3450 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 9100 3494 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9100 3400 50  0001 C CNN
+F 3 "~" H 9100 3400 50  0001 C CNN
+	1    9100 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NO_Small EF1
+U 1 1 67BFFA42
+P 9100 3300
+F 0 "EF1" H 9250 3350 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 9100 3394 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 9100 3300 50  0001 C CNN
+F 3 "~" H 9100 3300 50  0001 C CNN
+	1    9100 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 3300 9650 3300
+Wire Wire Line
+	9200 3400 9650 3400
+Wire Wire Line
+	9200 3500 9650 3500
+Wire Wire Line
+	8850 3300 8850 3400
+Connection ~ 8850 3600
+Wire Wire Line
+	8850 3600 9000 3600
+Wire Wire Line
+	8850 3300 9000 3300
+Wire Wire Line
+	8850 3400 9000 3400
+Connection ~ 8850 3400
+Wire Wire Line
+	8850 3400 8850 3500
+Wire Wire Line
+	8850 3500 9000 3500
+Connection ~ 8850 3500
+Wire Wire Line
+	8850 3500 8850 3600
+NoConn ~ 9650 3700
+NoConn ~ 9650 3800
+NoConn ~ 9650 4000
+NoConn ~ 9650 4100
+NoConn ~ 9650 4200
+NoConn ~ 9650 4300
+NoConn ~ 9650 4400
+NoConn ~ 9650 4500
+NoConn ~ 9650 4600
+NoConn ~ 9650 4700
+NoConn ~ 9650 4800
+NoConn ~ 9650 5100
+NoConn ~ 9650 5200
+NoConn ~ 9650 5400
+NoConn ~ 9650 5500
+NoConn ~ 9650 5600
+NoConn ~ 9650 6700
+NoConn ~ 9650 6800
+Wire Wire Line
+	9150 5000 9650 5000
+Wire Wire Line
+	9050 4900 9650 4900
+Entry Wire Line
+	9350 5800 9450 5900
+Entry Wire Line
+	9350 5900 9450 6000
+Entry Wire Line
+	9350 6000 9450 6100
+Entry Wire Line
+	9350 6100 9450 6200
+Entry Wire Line
+	9350 6200 9450 6300
+Entry Wire Line
+	9350 6300 9450 6400
+Entry Wire Line
+	9350 6400 9450 6500
+Entry Wire Line
+	9350 6500 9450 6600
+Wire Wire Line
+	9650 5900 9450 5900
+Wire Wire Line
+	5400 4100 5400 4250
+Connection ~ 5400 4100
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 67CD593E
+P 9000 4700
+F 0 "#FLG0101" H 9000 4775 50  0001 C CNN
+F 1 "PWR_FLAG" H 9000 4873 50  0000 C CNN
+F 2 "" H 9000 4700 50  0001 C CNN
+F 3 "~" H 9000 4700 50  0001 C CNN
+	1    9000 4700
+	1    0    0    -1  
+$EndComp
+Connection ~ 9000 4700
+Wire Wire Line
+	9000 4700 9150 4700
+Wire Wire Line
+	8700 5000 9000 5000
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 67CDB102
+P 9000 5000
+F 0 "#FLG0102" H 9000 5075 50  0001 C CNN
+F 1 "PWR_FLAG" H 9000 5173 50  0000 C CNN
+F 2 "" H 9000 5000 50  0001 C CNN
+F 3 "~" H 9000 5000 50  0001 C CNN
+	1    9000 5000
+	-1   0    0    1   
+$EndComp
+Connection ~ 9000 5000
+Wire Wire Line
+	9000 5000 9050 5000
+Wire Wire Line
+	7100 2700 7100 2800
+$Comp
+L +5v-POWER:+5V-PWR #PWR0103
+U 1 1 67CED288
+P 5250 3400
+F 0 "#PWR0103" H 5250 3250 50  0001 C CNN
+F 1 "+5V-PWR" H 5265 3573 50  0000 C CNN
+F 2 "" H 5250 3400 50  0001 C CNN
+F 3 "" H 5250 3400 50  0001 C CNN
+	1    5250 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5v-POWER:+5V-PWR #PWR0102
+U 1 1 67CFA14D
+P 7100 2700
+F 0 "#PWR0102" H 7100 2550 50  0001 C CNN
+F 1 "+5V-PWR" H 7115 2873 50  0000 C CNN
+F 2 "" H 7100 2700 50  0001 C CNN
+F 3 "" H 7100 2700 50  0001 C CNN
+	1    7100 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5v-POWER:+5V-PWR #PWR0104
+U 1 1 67CFE863
+P 7650 3500
+F 0 "#PWR0104" H 7650 3350 50  0001 C CNN
+F 1 "+5V-PWR" H 7665 3673 50  0000 C CNN
+F 2 "" H 7650 3500 50  0001 C CNN
+F 3 "" H 7650 3500 50  0001 C CNN
+	1    7650 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 3500 7650 3500
+Wire Wire Line
+	9000 3600 9200 3600
+Connection ~ 9000 3600
+Connection ~ 9200 3600
+Wire Wire Line
+	5600 6800 9250 6800
+Wire Wire Line
+	9650 6600 9450 6600
+Text Label 9450 5900 0    50   ~ 0
+BUS0
+Text Label 9450 6000 0    50   ~ 0
+BUS1
+Text Label 9450 6100 0    50   ~ 0
+BUS2
+Text Label 9450 6200 0    50   ~ 0
+BUS3
+Text Label 9450 6300 0    50   ~ 0
+BUS4
+Text Label 9450 6400 0    50   ~ 0
+BUS5
+Text Label 9450 6500 0    50   ~ 0
+BUS6
+Text Label 9450 6600 0    50   ~ 0
+BUS7
+Wire Wire Line
+	5400 4250 6050 4250
+Wire Wire Line
+	6050 4100 5400 4100
+Wire Wire Line
+	5900 3900 6050 3900
+Wire Wire Line
+	6050 3800 5800 3800
+Wire Wire Line
+	6050 3700 5700 3700
+Wire Wire Line
+	6050 3600 5600 3600
+Wire Wire Line
+	6050 3500 5500 3500
+Wire Wire Line
+	6050 3400 5400 3400
+Wire Wire Line
+	6050 3250 5400 3250
+Wire Wire Line
+	5500 3150 6050 3150
+Wire Wire Line
+	5900 3050 6050 3050
+Text Label 7450 4850 0    50   ~ 0
+BUS7
+$Comp
+L RC1802--Integer-Math-Coprocessor:CDP1855-cdp1802 U1
+U 1 1 67C41025
+P 6750 4300
+F 0 "U1" H 6750 5817 50  0000 C CNN
+F 1 "CDP1855" H 6750 5726 50  0000 C CNN
+F 2 "CDP1855_Socket" H 8300 4650 50  0001 C CNN
+F 3 "" H 8300 4650 50  0001 C CNN
+	1    6750 4300
+	1    0    0    -1  
+$EndComp
+Text Label 7450 4950 0    50   ~ 0
+BUS6
+Text Label 7450 5050 0    50   ~ 0
+BUS5
+Text Label 7450 5150 0    50   ~ 0
+BUS4
+Text Label 7450 5250 0    50   ~ 0
+BUS3
+Text Label 7450 5350 0    50   ~ 0
+BUS2
+Text Label 7450 5450 0    50   ~ 0
+BUS1
+Text Label 7450 5550 0    50   ~ 0
+BUS0
+Wire Bus Line
+	9350 5700 9350 6500
+Wire Bus Line
+	7800 4950 7800 5700
+$EndSCHEMATC

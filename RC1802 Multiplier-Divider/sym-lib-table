@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name RC1802--Integer-Math-Coprocessor)(type Legacy)(uri "${KIPRJMOD}/RC1802  Integer Math Coprocessor.lib")(options "")(descr ""))
+  (lib (name +5v-POWER)(type Legacy)(uri ${KIPRJMOD}/+5v-POWER.lib)(options "")(descr ""))
+)
